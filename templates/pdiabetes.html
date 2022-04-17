@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylep.css') }}">  
+    <title>Prediction</title>
+</head>
+
+<body bgcolor="4CEF93">
+    <h1><u>Diabetes</u></h1>
+    <div class="login">
+        <h2>Diabetes Checking</h2>
+        <img src="diabetes.jpg" alt="diabetes meter img" width="500" height="375">
+        <br>
+        <form action="{{ url_for('diabetes')}}" method="POST">
+            <h4>Enter your pregnancies</h4>
+            <input type="float" name="pregnancies" placeholder="00" required="required"/>
+            <br>
+            <h4>Enter your glucose</h4>
+            <input type="float" name="glucose" placeholder="000" required="required"/>
+            <br>
+		<h4>Enter your bloodpressure</h4>
+            <input type="float" name="bloodpressure" placeholder="000" required="required"/>
+		<br>
+		<h4>Enter your skinthickness</h4>
+            <input type="float" name="skinthickness" placeholder="00" required="required"/>
+            <br>
+		<h4>Enter your insulin</h4>
+            <input type="float" name="insulin" placeholder="000" required="required"/>
+            <br>	
+		<h4>Enter your bmi</h4>
+            <input type="float" name="bmi" placeholder="00.0" required="required"/>
+            <br>
+		<h4>Enter your diabetespedigreefunction</h4>
+            <input type="float" name="diabetespedigreefunction" placeholder="0.000" required="required"/>
+            <br>
+		<h4>Enter your age</h4>
+            <input type="float" name="age" placeholder="00" required="required"/>
+            <br>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+        <br>
+        {{ prediction_text }}
+    </div>
+</body>
+</html>

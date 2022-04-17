@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body bgcolor="cyan">
+ <div class="login">
+    
+     
+     <br>
+
+     <h1>Do you like pizza or Not ?</h1><br><br>
+     <form action="{{ url_for('ppizza')}}" method="POST">     
+         <button id="pizza" type="submit" 
+                 class="btn btn-primary btn-block btn-large">Pizza Liking Prediction</button>
+     </form>
+     <br><br>
+     <h1>Are you confused about How much fuel price for a trip?</h1><br><br>
+     <h2>No worries click below for a solution</h2><br><br>
+     <form action="{{ url_for('pfuel')}}" method="POST">
+         <button id="fuel" type="submit" 
+                 class="btn btn-primary btn-block btn-large">Fuel Price Prediction</button>
+     </form>
+     <br><br>
+     <h1>Check that you have DIABETES OR NOT ?</h1><br><br>
+     <form action="{{ url_for('pdiabetes')}}" method="POST">
+         <button id="diabetes" type="submit" 
+                 class="btn btn-primary btn-block btn-large">Diabetic or not</button>
+
+ </div>
+
+</body>
+</html>
